@@ -120,6 +120,25 @@ header h1 {
     overflow: auto
 }
 
+/* Output label shown above the output preview */
+.topic-output-label {
+    margin-top: 10px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* Output preview area (matches preview style) */
+.topic-output {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 12px;
+    border-radius: 6px;
+    overflow: auto;
+    white-space: pre-wrap;
+    margin-bottom: 8px;
+}
+
 .localRun {
     margin-top: 12px;
     padding: 10px;
@@ -307,4 +326,16 @@ button:active {
 
 .types-reference h3 {
     margin-top: 0
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+a {
+    color: var(--text);
 }

@@ -2,7 +2,7 @@ window.topics = window.topics || [];
 window.topics.push({
   id: 'defer',
   title: 'Defer',
-  desc: 'Contoh penggunaan defer: eksekusi LIFO, evaluasi argumen segera, dan capture variabel oleh closure.',
+  desc: 'Examples of defer: LIFO execution, immediate argument evaluation, and closure capture.',
   code: `package main
 
 import "fmt"
@@ -18,4 +18,3 @@ func main() {
 `,
   output: 'i: 1\ndefer closure captured: 1\ndefer with arg: 0\n'
 });
-

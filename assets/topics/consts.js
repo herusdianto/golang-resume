@@ -2,7 +2,7 @@ window.topics = window.topics || [];
 window.topics.push({
   id: 'consts',
   title: 'Constants',
-  desc: 'Gunakan const untuk nilai tetap.',
+  desc: 'Use const for constant values.',
   code: `package main
 
 import "fmt"
@@ -14,4 +14,3 @@ func main() {
 }`,
   output: 'PI = 3.14\n'
 });
-

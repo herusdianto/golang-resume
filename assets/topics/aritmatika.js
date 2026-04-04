@@ -1,8 +1,8 @@
 window.topics = window.topics || [];
 window.topics.push({
   id: 'aritmatika',
-  title: 'Aritmatika',
-  desc: 'Operasi aritmatika dasar: penjumlahan, pengurangan, perkalian, pembagian dan lainnya.',
+  title: 'Arithmetic',
+  desc: 'Basic arithmetic operations: addition, subtraction, multiplication, division, and more.',
   code: `package main
 
 import (
@@ -93,4 +93,3 @@ func main() {
 `,
   output: 'a + b = 10\na - b = 4\na * b = 21\na / b = 2\na % b = 1\nx / y = 2.3333333333333335\nmixed: 2.3333333333333335\npower: 8\ni after i++ 2\nj after j-- 1\nprecedence: 7\nv: 10\nv += 5: 15\nv -= 3: 12\nv *= 2: 24\nv /= 4: 6\nv %= 3: 0\nswap aa,bb: 2 1\nunderscore ignored, c: 5\nd, e: 7 8\na == b: false\na != b: true\na < b: false\na <= b: false\na > b: true\na >= b: true\nx > y: true\ns1 == s2: true\ns1 < s3: true\n'
 });
-

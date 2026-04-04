@@ -2,7 +2,7 @@ window.topics = window.topics || [];
 window.topics.push({
   id: 'switch',
   title: 'Switch',
-  desc: 'Contoh switch: switch multi-case, switch tanpa expression, dan fallthrough.',
+  desc: 'Switch examples: multi-case switch, switch without expression, and fallthrough.',
   code: `package main
 
 import "fmt"
@@ -18,7 +18,7 @@ func main() {
         fmt.Println("other")
     }
 
-    // switch tanpa ekspresi (menggantikan if-else chains)
+    // switch without expression (replaces if-else chains)
     switch {
     case n%2 == 0:
         fmt.Println("even")
@@ -26,7 +26,7 @@ func main() {
         fmt.Println("odd")
     }
 
-    // fallthrough (contoh sederhana)
+    // fallthrough (simple example)
     switch 1 {
     case 1:
         fmt.Println("a")
@@ -38,4 +38,3 @@ func main() {
 `,
   output: 'two\neven\na\nb\n'
 });
-

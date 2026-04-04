@@ -2,28 +2,27 @@ window.topics = window.topics || [];
 window.topics.push({
   id: 'arrays',
   title: 'Arrays',
-  desc: 'Contoh array: deklarasi, akses index, zero-values, dan inisialisasi sebagian.',
+  desc: 'Array examples: declaration, index access, zero-values, and partial initialization.',
   code: `package main
 
 import "fmt"
 
 func main() {
-    // Deklarasi dan inisialisasi
+    // Declaration and initialization
     arr := [3]int{1, 2, 3}
     fmt.Println(arr)
 
-    // Akses index
+    // Index access
     fmt.Println("arr[0]:", arr[0])
 
-    // Tanpa inisialisasi: nilai nol
+    // Without initialization: zero values
     var arr2 [4]int
     fmt.Println("arr2:", arr2)
 
-    // Inisialisasi sebagian (keyed indices)
+    // Partial initialization (keyed indices)
     arr3 := [5]int{1: 10, 3: 30}
     fmt.Println("arr3:", arr3)
 }
 `,
   output: '[1 2 3]\narr[0]: 1\narr2: [0 0 0 0]\narr3: [0 10 0 30 0]\n'
 });
-

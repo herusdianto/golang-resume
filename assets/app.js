@@ -14,6 +14,7 @@ let typesRefEl; // reference to the types reference section
 // State
 let currentTopic = null; // set after topics are loaded in init()
 let topicOutputEl; // element to show topic output
+let topicOutputLabelEl; // label element that shows "Output" above the output
 
 function loadScript(src) {
   return new Promise((resolve, reject) => {
@@ -45,17 +46,17 @@ async function ensurePrismGo() {
 // Update the topics array: replace the long HTML desc with a brief summary for types
 const typesTopicIndex = topics.findIndex(t => t.id === 'types');
 if (typesTopicIndex !== -1) {
-  topics[typesTopicIndex].desc = 'Ringkasan tipe data dasar di Go. Detail lengkap tersedia di bawah (Referensi Tipe Data).';
+  topics[typesTopicIndex].desc = 'Summary of Go basic data types. Full details available below (Types Reference).';
 }
 
 // Move printf reference HTML into a separate constant
 const printfReferenceHtml = `<div class="printf-ref">
-  <p>Contoh <code>fmt.Printf</code> menggunakan format verbs (verb) dan opsi width/precision.</p>
+  <p>Example <code>fmt.Printf</code> using format verbs and width/precision options.</p>
   <table class="type-table">
-    <thead><tr><th>Verb</th><th>Keterangan</th><th>Contoh</th></tr></thead>
+    <thead><tr><th>Verb</th><th>Description</th><th>Example</th></tr></thead>
     <tbody>
-      <tr><td>%v</td><td>Default format untuk nilai</td><td><code>fmt.Printf("%v", x)</code></td></tr>
-      <tr><td>%T</td><td>Tipe dari nilai</td><td><code>fmt.Printf("%T", x)</code></td></tr>
+      <tr><td>%v</td><td>Default format for value</td><td><code>fmt.Printf("%v", x)</code></td></tr>
+      <tr><td>%T</td><td>Type of the value</td><td><code>fmt.Printf("%T", x)</code></td></tr>
       <tr><td>%s</td><td>String</td><td><code>%s</code></td></tr>
       <tr><td>%d</td><td>Decimal integer</td><td><code>%d</code></td></tr>
       <tr><td>%f</td><td>Floating-point (default 6 dec places)</td><td><code>%.2f</code></td></tr>
@@ -65,7 +66,7 @@ const printfReferenceHtml = `<div class="printf-ref">
       <tr><td>%p</td><td>Pointer address</td><td><code>%p</code></td></tr>
     </tbody>
   </table>
-  <p>Opsi width/precision: <code>%6d</code> (width), <code>%-10s</code> (left align), <code>%06d</code> (zero pad), <code>%8.3f</code> (width + precision).</p>
+  <p>Width/precision options: <code>%6d</code> (width), <code>%-10s</code> (left align), <code>%06d</code> (zero pad), <code>%8.3f</code> (width + precision).</p>
 </div>`;
 // Use as fallback if refs.js didn't set a window.printfReferenceHtml
 window.printfReferenceHtml = window.printfReferenceHtml || printfReferenceHtml;
@@ -73,7 +74,7 @@ window.printfReferenceHtml = window.printfReferenceHtml || printfReferenceHtml;
 // Update printf topic: keep short desc only (table moved)
 const printfTopicIndex = topics.findIndex(t => t.id === 'printf');
 if (printfTopicIndex !== -1) {
-  topics[printfTopicIndex].desc = 'Contoh penggunaan fmt.Printf; referensi format lengkap di bawah (Referensi fmt.Printf).';
+  topics[printfTopicIndex].desc = 'Printf examples; full format reference is available below (Printf Reference).';
 }
 
 async function init() {
@@ -112,16 +113,29 @@ async function init() {
   // create output preview element under the code preview if missing
   try {
     topicOutputEl = document.getElementById('topicOutput');
+    topicOutputLabelEl = document.getElementById('topicOutputLabel');
     if (!topicOutputEl && highlightedCode && highlightedCode.parentElement) {
+      // create label for the output preview
+      const label = document.createElement('div');
+      label.id = 'topicOutputLabel';
+      label.className = 'topic-output-label';
+      label.innerHTML = '<h3>Output:</h3>';
+      label.style.display = 'none';
+
       const pre = document.createElement('pre');
       pre.id = 'topicOutput';
       pre.className = 'topic-output';
       const code = document.createElement('code');
       pre.appendChild(code);
-      // insert after the <pre> that contains highlightedCode
+
+      // insert after the <pre> that contains highlightedCode: first insert label, then pre
       const ref = highlightedCode.parentElement;
-      if (ref && ref.parentNode) ref.parentNode.insertBefore(pre, ref.nextSibling);
+      if (ref && ref.parentNode) {
+        ref.parentNode.insertBefore(label, ref.nextSibling);
+        ref.parentNode.insertBefore(pre, label.nextSibling);
+      }
       topicOutputEl = pre;
+      topicOutputLabelEl = label;
     }
   } catch (e) {
     console.warn('Could not create topicOutput element:', e);
@@ -285,10 +299,18 @@ function updateOutput(text) {
       code.textContent = text;
       topicOutputEl.style.display = '';
       topicOutputEl.setAttribute('aria-hidden', 'false');
+      if (topicOutputLabelEl) {
+        topicOutputLabelEl.style.display = '';
+        topicOutputLabelEl.setAttribute('aria-hidden', 'false');
+      }
     } else {
       code.textContent = '';
       topicOutputEl.style.display = 'none';
       topicOutputEl.setAttribute('aria-hidden', 'true');
+      if (topicOutputLabelEl) {
+        topicOutputLabelEl.style.display = 'none';
+        topicOutputLabelEl.setAttribute('aria-hidden', 'true');
+      }
     }
   } catch (e) {
     console.warn('updateOutput error:', e);
@@ -311,9 +333,9 @@ async function copyCode() {
   try {
     const code = currentTopic && currentTopic.code ? currentTopic.code : '';
     await navigator.clipboard.writeText(code);
-    alert('Kode disalin ke clipboard');
+    alert('Code copied to clipboard');
   } catch (e) {
-    alert('Gagal menyalin: ' + e.message);
+    alert('Failed to copy: ' + e.message);
   }
 }
 
@@ -336,14 +358,14 @@ function downloadCode() {
 
 function openPlayground() {
   if (!playForm || !playBody) {
-    alert('Playground form tidak tersedia. Silakan salin kode secara manual ke https://play.golang.org');
+    alert('Play form not available. Please copy the code manually to https://play.golang.org');
     return;
   }
   playBody.value = currentTopic && currentTopic.code ? currentTopic.code : '';
   try {
     playForm.submit();
   } catch (e) {
-    alert('Tidak bisa membuka Go Playground secara otomatis. Silakan salin kode dan buka https://play.golang.org');
+    alert('Could not open Go Playground automatically. Please copy the code and open https://play.golang.org');
   }
 }
 

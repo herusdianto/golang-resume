@@ -2,7 +2,7 @@ window.topics = window.topics || [];
 window.topics.push({
   id: 'recover',
   title: 'Recover',
-  desc: 'Contoh recover: menggunakan recover dalam fungsi deferred untuk menangkap panic dan melanjutkan eksekusi.',
+  desc: 'Example of recover: using recover in a deferred function to catch panic and continue execution.',
   code: `package main
 
 import "fmt"
@@ -24,4 +24,3 @@ func main() {
 `,
   output: 'calling safe\nrecovered: something bad\nafter safe\n'
 });
-

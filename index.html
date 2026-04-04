@@ -1,17 +1,17 @@
 <!doctype html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Belajar Go (Golang) - Interaktif</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <title>Learn Go (Golang) - Interactive</title>
+  <link rel="stylesheet" href="./assets/style.css">
   <!-- Prism for syntax highlighting -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
 </head>
 <body>
   <div class="container">
     <aside class="sidebar">
-      <h2>Topik</h2>
+      <h2>Topic</h2>
       <ul id="topicsList"></ul>
     </aside>
 
@@ -29,49 +29,49 @@
       </div>
 
       <header>
-        <h1 id="topicTitle">Belajar Go</h1>
-        <p id="topicDesc">Pilih topik di kiri untuk melihat contoh dan bereksperimen.</p>
+        <h1 id="topicTitle">Learn Go</h1>
+        <p id="topicDesc">Choose a topic on the left to view examples and experiment.</p>
       </header>
 
       <section class="editorPanel">
         <div class="editorActions">
           <button id="copyBtn">Copy</button>
           <button id="downloadBtn">Download .go</button>
-          <button id="playgroundBtn">Buka di Go Playground</button>
-          <button id="typesRefBtn">Referensi Tipe Data</button>
+          <button id="playgroundBtn">Open in Go Playground</button>
+          <button id="typesRefBtn">Types Reference</button>
         </div>
 
         <div class="preview">
           <pre class="language-go"><code id="highlightedCode" class="language-go"></code></pre>
         </div>
 
-        <!-- form untuk submit ke Go Playground (fallback via POST) -->
+        <!-- form to submit to Go Playground (fallback via POST) -->
         <form id="playForm" method="post" action="https://play.golang.org/" target="_blank" style="display:none;">
+          <label for="playBody" class="visually-hidden">Playground body</label>
           <textarea name="body" id="playBody"></textarea>
         </form>
 
         <aside class="localRun">
-          <h4>Instruksi jalankan lokal</h4>
+          <h4>Local run instructions</h4>
           <ol>
-            <li>Klik "Download .go" atau salin kode.</li>
-            <li>Simpan sebagai <code>nama.go</code>, lalu di terminal jalankan:</li>
-            <pre>go run nama.go</pre>
-            <li>Jika belum install Go: https://go.dev/dl</li>
+            <li>Click "Download .go" or copy the code.</li>
+            <li>Save as <code>name.go</code>, then in a terminal run: <code>go run name.go</code></li>
+            <li>If Go is not installed: <a href="https://go.dev/dl" target="_blank" rel="noopener noreferrer">https://go.dev/dl</a></li>
           </ol>
         </aside>
       </section>
 
-      <!-- TYPES REFERENCE: akan diisi oleh app.js -->
-      <section id="typesRef" class="types-ref" aria-label="Referensi Tipe Data"></section>
+      <!-- TYPES REFERENCE: populated by app.js -->
+      <section id="typesRef" class="types-ref" aria-label="Types Reference"></section>
 
-      <!-- PRINTF REFERENCE: akan diisi oleh app.js -->
-      <section id="printfRef" class="types-ref" aria-label="Referensi fmt.Printf"></section>
+      <!-- PRINTF REFERENCE: populated by app.js -->
+      <section id="printfRef" class="types-ref" aria-label="fmt.Printf Reference"></section>
 
     </main>
   </div>
 
   <!-- Prism core (theme above). The language component for Go is loaded dynamically by app.js if Prism is available. -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-  <script src="assets/app.js"></script>
+  <script src="./assets/app.js"></script>
 </body>
 </html>

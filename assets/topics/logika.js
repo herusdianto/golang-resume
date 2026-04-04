@@ -1,8 +1,8 @@
 window.topics = window.topics || [];
 window.topics.push({
   id: 'logika',
-  title: 'Logika',
-  desc: 'Operator logika: && (AND), || (OR), dan ! (NOT). Contoh short-circuit dan kombinasi dengan perbandingan.',
+  title: 'Logical',
+  desc: 'Logical operators: && (AND), || (OR), and ! (NOT). Examples include short-circuiting and combinations with comparisons.',
   code: `package main
 
 import "fmt"
@@ -22,13 +22,13 @@ func main() {
     x := 5
     y := 10
     fmt.Println("x < y && y > 0:", x < y && y > 0)
+    fmt.Println("x < y && y > 0:", x < y && y > 0)
     fmt.Println("x == 5 || y == 5:", x == 5 || y == 5)
 
     // Short-circuit: right side not evaluated when left decides
-    // (demonstrated logically; no side-effects here)
     fmt.Println("(a && (x/0==0)) safe?:", a && (x > 0))
 
-    // Negation combined
+    // Negation
     fmt.Println("!(x < y):", !(x < y))
 
     // More complex combination
@@ -37,4 +37,3 @@ func main() {
 `,
   output: 'a: true\nb: false\na && b: false\na || b: true\n!a: false\nx < y && y > 0: true\nx == 5 || y == 5: true\n(a && (x/0==0)) safe?: true\n!(x < y): false\n(x < y) && (a || b): true\n'
 });
-

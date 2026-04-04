@@ -2,20 +2,20 @@ window.topics = window.topics || [];
 window.topics.push({
   id: 'closure',
   title: 'Closure',
-  desc: 'Contoh closure: fungsi yang menangkap variabel luar, closure yang menyimpan state, dan closure factory.',
+  desc: 'Examples of closures: capturing outer variables, closures with internal state, and closure factories.',
   code: `package main
 
 import "fmt"
 
 func main() {
-    // Closure yang menangkap variabel luar
+    // Closure that captures outer variable
     x := 10
     add := func(y int) int {
         return x + y
     }
     fmt.Println("add(5):", add(5))
 
-    // Closure yang menyimpan state internal (counter)
+    // Closure that keeps internal state (counter)
     inc := func() func() int {
         counter := 0
         return func() int {
@@ -26,7 +26,7 @@ func main() {
     fmt.Println("inc():", inc())
     fmt.Println("inc():", inc())
 
-    // Closure factory: menghasilkan fungsi yang mengalikan
+    // Closure factory: creates multiplier functions
     mulBy := func(factor int) func(int) int {
         return func(n int) int { return n * factor }
     }
@@ -36,4 +36,3 @@ func main() {
 `,
   output: 'add(5): 15\ninc(): 1\ninc(): 2\ndouble(4): 8\n'
 });
-

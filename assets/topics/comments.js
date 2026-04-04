@@ -1,19 +1,18 @@
 window.topics = window.topics || [];
 window.topics.push({
   id: 'comments',
-  title: 'Komentar',
-  desc: 'Komentar satu baris dan multi-baris.',
+  title: 'Comments',
+  desc: 'Single-line and multi-line comments.',
   code: `package main
 
 import "fmt"
 
-// Ini komentar satu baris
-/* Ini komentar
-   multi-line */
+// This is a single-line comment
+/* This is a
+   multi-line comment */
 
 func main() {
-    fmt.Println("Komentar tidak muncul di output")
+    fmt.Println("Comments do not appear in output")
 }`,
-  output: 'Komentar tidak muncul di output\n'
+  output: 'Comments do not appear in output\n'
 });
-

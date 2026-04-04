@@ -2,7 +2,7 @@ window.topics = window.topics || [];
 window.topics.push({
   id: 'functions',
   title: 'Functions',
-  desc: 'Mendefinisikan dan memanggil fungsi: named, anonymous, variadic, function-as-value, function-as-parameter, dan rekursi.',
+  desc: 'Defining and calling functions: named, anonymous, variadic, function-as-value, function-as-parameter, and recursion.',
   code: `package main
 
 import "fmt"
@@ -79,4 +79,3 @@ func main() {
 `,
   output: '5 + 3 = 8\nHello Go\nanon immediate\nsumAll(1 ,2, 3) = 6\nmul(3, 4) = 12\napply tambah: 5\napply mul: 6\nfact(5) = 120\nfib(6)  = 8\n'
 });
-

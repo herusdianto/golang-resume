@@ -2,7 +2,7 @@ window.topics = window.topics || [];
 window.topics.push({
   id: 'if',
   title: 'If / Else',
-  desc: 'Contoh pernyataan if, if-else, dan if dengan statement sebelum kondisi.',
+  desc: 'If statement examples: if, if-else, and if with a short statement before the condition.',
   code: `package main
 
 import "fmt"
@@ -18,7 +18,7 @@ func main() {
         fmt.Println("x > 3")
     }
 
-    // if dengan short statement
+    // if with short statement
     if v := x * 2; v > 8 {
         fmt.Println("v > 8")
     } else {
@@ -28,4 +28,3 @@ func main() {
 `,
   output: 'x > 3\nv > 8\n'
 });
-

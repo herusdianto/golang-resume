@@ -1,8 +1,8 @@
 window.topics = window.topics || [];
 window.topics.push({
   id: 'types',
-  title: 'Tipe data dasar',
-  desc: 'Ringkasan tipe data dasar di Go. Detail lengkap tersedia di bawah (Referensi Tipe Data).',
+  title: 'Basic data types',
+  desc: 'Summary of Go basic data types. Full details available below (Types Reference).',
   code: `package main
 
 import (
@@ -22,13 +22,12 @@ func main() {
     var r rune = '世'   // rune is int32
     var byt byte = 0x7A // byte is uint8
 
-    var s string = "Halo, tipe data Go"
+    var s string = "Hello, Go data types"
     var bo bool = true
 
     fmt.Println(a, b, c, d, e)
     fmt.Println(f, g)
     fmt.Println(r, byt, s, bo)
 }`,
-  output: '127 255 -32768 2147483647 9223372036854775807\n3.14 1.23456789012345\n19990 122 Halo, tipe data Go true\n'
+  output: '127 255 -32768 2147483647 9223372036854775807\n3.14 1.23456789012345\n19990 122 Hello, Go data types true\n'
 });
-

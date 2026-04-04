@@ -2,7 +2,7 @@ window.topics = window.topics || [];
 window.topics.push({
   id: 'panic',
   title: 'Panic',
-  desc: 'Contoh panic: memicu panic dan menunjukkan bahwa eksekusi setelah panic tidak berjalan.',
+  desc: 'Example of panic: triggering a panic and showing that execution after panic does not continue.',
   code: `package main
 
 import "fmt"
@@ -19,4 +19,3 @@ func main() {
 `,
   output: 'before panic\npanic: something went wrong\n'
 });
-

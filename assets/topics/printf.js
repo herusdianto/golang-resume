@@ -2,7 +2,7 @@ window.topics = window.topics || [];
 window.topics.push({
   id: 'printf',
   title: 'Printf',
-  desc: 'Contoh penggunaan fmt.Printf; referensi format lengkap di bawah (Referensi fmt.Printf).',
+  desc: 'Printf examples using format verbs and width/precision options. See the reference for details.',
   code: `package main
 
 import "fmt"
@@ -25,4 +25,3 @@ func main() {
 }`,
   output: 'Name: Ana, Age: 29\nPi approx: 3.14\nValue: 3.14159 (type: float64)\nHex: 0xff\nPadded:    42\nLeft: hi        |\nZero padded: 000042\nWidth/prec:    3.142\n'
 });
-

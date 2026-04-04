@@ -2,14 +2,13 @@ window.topics = window.topics || [];
 window.topics.push({
   id: 'basic',
   title: 'Basic syntax',
-  desc: 'Struktur minimal program Go: package, import, func main.',
+  desc: 'Minimal Go program structure: package, import, func main.',
   code: `package main
 
 import "fmt"
 
 func main() {
-    fmt.Println("Halo, Go!")
+    fmt.Println("Hello, Go!")
 }`,
-  output: 'Halo, Go!\n'
+  output: 'Hello, Go!\n'
 });
-
