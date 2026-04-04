@@ -82,7 +82,7 @@ async function init() {
   try {
     if (!window.typesReferenceHtml || !window.printfReferenceHtml) {
       // load refs.js which sets window.typesReferenceHtml and window.printfReferenceHtml
-      await loadScript('/assets/refs.js');
+      await loadScript('assets/refs.js');
     }
   } catch (e) {
     console.warn('Could not load refs.js dynamically:', e);
@@ -91,7 +91,7 @@ async function init() {
   try {
     if (!window.topics || !window.topics.length) {
       // load topics.js which sets window.topics
-      await loadScript('/assets/topics.js');
+      await loadScript('assets/topics.js');
     }
     // if loader exposes a promise, wait for individual topic files to load
     if (window.__topicsLoadedPromise && typeof window.__topicsLoadedPromise.then === 'function') {

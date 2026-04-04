@@ -1,4 +1,4 @@
-// topics.js — loader that imports individual topic modules from /assets/topics/*.js
+// topics.js — loader that imports individual topic modules from assets/topics/*.js
 // This keeps the topics split into multiple files for maintainability.
 window.topics = [];
 window.__topicsLoadedPromise = (async function() {
