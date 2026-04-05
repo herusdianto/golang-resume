@@ -10,12 +10,13 @@ Topics (located in `assets/topics/`):
 - Variables (`vars.js`) — variable declarations and scope
 - Constants (`consts.js`) — const declarations and usage
 - Types (`types.js`) — type declarations and conversion
-- Printf & Formatting (`printf.js`) — formatting output
+- Printf & Formatting (`printf.js`) — formatting output and common format verbs
+- Type declarations & assertions (`type_decl.js`) — type alias vs new type, conversion, methods on named types, interface assertions and type switches
+- Pointers (`pointer.js`) — address (&), dereference (*), nil pointers, pointers to structs, and receiver behavior
 - Structs (`struct.js`) — struct definition, methods, embedding, and pointer/value receivers
 - Interfaces (`interface.js`) — interface definitions, implementations, type assertions, and empty interface
 - Errors (`errors.js`) — examples of the standard `errors` package: sentinel errors, wrapping with %w, errors.Is, errors.As, errors.Unwrap, and custom error types
 - Nil (`nil.js`) — nil values for slices, maps, pointers, channels, funcs, and interfaces
-- Type declarations & assertions (`type_decl.js`) — type alias vs new type, conversion, methods on named types, interface assertions and type switches
 - Arithmetic (`aritmatika.js`) — basic numeric operations and expressions
 - Logical operators (`logika.js`) — boolean logic and operators
 - Arrays (`arrays.js`) — fixed-size collections
