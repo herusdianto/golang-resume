@@ -1,24 +1,25 @@
-# Go (Golang) — Resume / Reference
+# Go (Golang) — Concise Resume / Reference
 
-This repository is a concise resume of Go language concepts and examples — a quick reference.
+This repository is a short, non-interactive resume of Go language concepts and compact example snippets. It's intended as a quick reference rather than a tutorial.
 
-Live demo: [here](https://herusdianto.github.io/golang-resume/)
+Live demo: https://herusdianto.github.io/golang-resume/
 
-Topics (located in `assets/topics/`):
+Topics (sidebar order):
 - Basics (`basic.js`) — minimal examples and setup
 - Comments (`comments.js`) — code commenting conventions
 - Variables (`vars.js`) — variable declarations and scope
-- Constants (`consts.js`) — const declarations and usage
-- Types (`types.js`) — type declarations and conversion
-- Printf & Formatting (`printf.js`) — formatting output and common format verbs
-- Type declarations & assertions (`type_decl.js`) — type alias vs new type, conversion, methods on named types, interface assertions and type switches
-- Pointers (`pointer.js`) — address (&), dereference (*), nil pointers, pointers to structs, and receiver behavior
-- Structs (`struct.js`) — struct definition, methods, embedding, and pointer/value receivers
-- Interfaces (`interface.js`) — interface definitions, implementations, type assertions, and empty interface
-- Errors (`errors.js`) — examples of the standard `errors` package: sentinel errors, wrapping with %w, errors.Is, errors.As, errors.Unwrap, and custom error types
+- Constants (`consts.js`) — constants and iota
+- Types (`types.js`) — built-in types overview
+- Printf & Formatting (`printf.js`) — formatting output and common verbs
+- Type Conversion (`conversion.js`) — explicit casts, strconv helpers
+- Type declarations & assertions (`type_decl.js`) — named types, aliases, methods, and type assertions
+- Pointers (`pointer.js`) — addresses, dereference, and pointer receivers
+- Structs (`struct.js`) — struct definition, methods, embedding
+- Interfaces (`interface.js`) — interface definitions and empty interface
+- Errors (`errors.js`) — idiomatic usage of the standard `errors` package and the `error` interface
 - Nil (`nil.js`) — nil values for slices, maps, pointers, channels, funcs, and interfaces
-- Arithmetic (`aritmatika.js`) — basic numeric operations and expressions
-- Logical operators (`logika.js`) — boolean logic and operators
+- Arithmetic (`aritmatika.js`) — numeric operations
+- Logical operators (`logika.js`) — boolean logic
 - Arrays (`arrays.js`) — fixed-size collections
 - Slices (`slices.js`) — dynamic-length sequences
 - Maps (`maps.js`) — key-value collections
@@ -26,30 +27,23 @@ Topics (located in `assets/topics/`):
 - Switch (`switch.js`) — multi-branch selection
 - For loops (`for.js`) — loops and iteration patterns
 - Break & Continue (`break_continue.js`) — loop control flow
-- Functions (`functions.js`) — function declarations and return values
+- Functions (`functions.js`) — function declarations and returns
 - Closures (`closure.js`) — function literals and closures
-- Defer (`defer.js`) — deferred function calls
+- Defer (`defer.js`) — deferred calls
 - Panic (`panic.js`) — causing runtime panics
 - Recover (`recover.js`) — recovering from panics
 
-Files of interest:
-- `index.html` — static resume UI (open in a browser or view the Live demo)
-- `assets/style.css` — styling
-- `assets/app.js` — minimal UI logic used by the static page
-- `assets/refs.js`, `assets/topics/*.js` — topic entries and code snippets
-
 How to use
-1. Open `index.html` in a modern browser or visit the Live demo link above.
-2. Browse the topics (sidebar) to read short examples and notes.
-3. Copy any example code manually and save it to a `.go` file to run locally.
-4. To run examples locally: save the snippet to `example.go` and run `go run example.go`.
+1. Open `index.html` in a browser or visit the Live demo link above.
+2. Browse the sidebar topics to read short examples and notes.
+3. Copy any example code and save it to a `.go` file to run locally (e.g., `go run example.go`).
 
 Notes
-- This repository is a compact reference (resume) — it's intentionally simple and static.
-- The page uses Prism.js for syntax highlighting and the topics are stored as JS files for ease of maintenance.
+- This is a compact, static reference — not an interactive tutorial.
+- The page uses simple JS topic files under `assets/topics/` and `assets/refs.js` for small reference snippets.
 
 Contributing
-- Corrections, clarifications, and additional concise examples are welcome. Please open issues or PRs.
+Corrections and concise additions are welcome via issues or pull requests.
 
 License
 MIT

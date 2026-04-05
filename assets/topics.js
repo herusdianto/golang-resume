@@ -9,6 +9,7 @@ window.__topicsLoadedPromise = (async function() {
     'assets/topics/consts.js',
     'assets/topics/types.js',
     'assets/topics/printf.js',
+    'assets/topics/conversion.js',
     'assets/topics/type_decl.js',
     'assets/topics/pointer.js',
     'assets/topics/struct.js',
