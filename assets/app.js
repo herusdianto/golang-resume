@@ -164,7 +164,13 @@ async function init() {
   // Inject printf reference HTML into #printfRef if present
   const printfRefEl = document.getElementById('printfRef');
   if (printfRefEl) {
-    printfRefEl.innerHTML = window.printfReferenceHtml || '';
+    // Use a visible fallback if the reference HTML is empty to help debugging
+    if (window.printfReferenceHtml && typeof window.printfReferenceHtml === 'string' && window.printfReferenceHtml.trim().length) {
+      printfRefEl.innerHTML = window.printfReferenceHtml;
+    } else {
+      console.warn('printf reference HTML is missing; showing fallback message');
+      printfRefEl.innerHTML = `<div class="printf-ref"><p><em>Printf reference not available. Please ensure <code>assets/refs.js</code> is present and defines <code>window.printfReferenceHtml</code>.</em></p></div>`;
+    }
     printfRefEl.classList.remove('active');
     printfRefEl.setAttribute('aria-hidden', 'true');
   }
@@ -267,6 +273,8 @@ function selectTopic(id) {
     if (id === 'printf') {
       printfRefEl2.classList.add('active');
       printfRefEl2.setAttribute('aria-hidden', 'false');
+      // ensure the reference is visible to the user
+      try { printfRefEl2.scrollIntoView({behavior: 'smooth'}); } catch(e) { /* ignore if not supported */ }
     } else {
       printfRefEl2.classList.remove('active');
       printfRefEl2.setAttribute('aria-hidden', 'true');
