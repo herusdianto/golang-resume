@@ -8,30 +8,39 @@ Topics (sidebar order):
 - Basics (`basic.js`) — minimal examples and setup
 - Go Modules (`go_modules.js`) — module-aware builds, go.mod/go.sum, and common commands
 - Comments (`comments.js`) — code commenting conventions
+
 - Variables (`vars.js`) — variable declarations and scope
 - Constants (`consts.js`) — constants and iota
 - init() & blank identifier (`init_blank.js`) — package initialization order and the blank identifier `_` to discard values/import-for-side-effects
+
 - Types (`types.js`) — built-in types overview
 - Printf & Formatting (`printf.js`) — formatting output and common verbs
 - Type Conversion (`conversion.js`) — explicit casts, strconv helpers
+
 - Type declarations & assertions (`type_decl.js`) — named types, aliases, methods, and type assertions
 - Access / Exporting (`access_modifier.js`) — exported vs unexported identifiers, package visibility, and effects (e.g., JSON marshaling)
+
 - Pointers (`pointer.js`) — addresses, dereference, and pointer receivers
 - Structs (`struct.js`) — struct definition, methods, embedding
 - Interfaces (`interface.js`) — interface definitions and empty interface
 - Errors (`errors.js`) — idiomatic usage of the standard `errors` package and the `error` interface
 - Nil (`nil.js`) — nil values for slices, maps, pointers, channels, funcs, and interfaces
+
 - Arithmetic (`aritmatika.js`) — numeric operations
 - Logical operators (`logika.js`) — boolean logic
 - Arrays (`arrays.js`) — fixed-size collections
 - Slices (`slices.js`) — dynamic-length sequences
 - Maps (`maps.js`) — key-value collections
+
 - If statements (`if.js`) — conditional branching
 - Switch (`switch.js`) — multi-branch selection
 - For loops (`for.js`) — loops and iteration patterns
 - Break & Continue (`break_continue.js`) — loop control flow
+
 - Functions (`functions.js`) — function declarations and returns
 - Closures (`closure.js`) — function literals and closures
+- Unit Testing (`unit_test.js`) — using the `testing` package, table-driven tests, subtests, TestMain, and benchmarks
+
 - Defer (`defer.js`) — deferred calls
 - Panic (`panic.js`) — causing runtime panics
 - Recover (`recover.js`) — recovering from panics
