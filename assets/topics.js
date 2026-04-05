@@ -8,6 +8,7 @@ window.__topicsLoadedPromise = (async function() {
     'assets/topics/comments.js',
     'assets/topics/vars.js',
     'assets/topics/consts.js',
+    'assets/topics/init_blank.js',
     'assets/topics/types.js',
     'assets/topics/printf.js',
     'assets/topics/conversion.js',

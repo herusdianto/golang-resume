@@ -10,6 +10,7 @@ Topics (sidebar order):
 - Comments (`comments.js`) — code commenting conventions
 - Variables (`vars.js`) — variable declarations and scope
 - Constants (`consts.js`) — constants and iota
+- init() & blank identifier (`init_blank.js`) — package initialization order and the blank identifier `_` to discard values/import-for-side-effects
 - Types (`types.js`) — built-in types overview
 - Printf & Formatting (`printf.js`) — formatting output and common verbs
 - Type Conversion (`conversion.js`) — explicit casts, strconv helpers
