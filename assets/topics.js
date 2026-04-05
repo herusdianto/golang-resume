@@ -4,6 +4,7 @@ window.topics = [];
 window.__topicsLoadedPromise = (async function() {
   const topicFiles = [
     'assets/topics/basic.js',
+    'assets/topics/go_modules.js',
     'assets/topics/comments.js',
     'assets/topics/vars.js',
     'assets/topics/consts.js',

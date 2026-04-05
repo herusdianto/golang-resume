@@ -6,6 +6,7 @@ Live demo: https://herusdianto.github.io/golang-resume/
 
 Topics (sidebar order):
 - Basics (`basic.js`) — minimal examples and setup
+- Go Modules (`go_modules.js`) — module-aware builds, go.mod/go.sum, and common commands
 - Comments (`comments.js`) — code commenting conventions
 - Variables (`vars.js`) — variable declarations and scope
 - Constants (`consts.js`) — constants and iota
