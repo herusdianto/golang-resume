@@ -8,6 +8,8 @@ window.__topicsLoadedPromise = (async function() {
     'assets/topics/vars.js',
     'assets/topics/consts.js',
     'assets/topics/types.js',
+    'assets/topics/struct.js',
+    'assets/topics/interface.js',
     'assets/topics/printf.js',
     'assets/topics/aritmatika.js',
     'assets/topics/logika.js',
@@ -23,7 +25,6 @@ window.__topicsLoadedPromise = (async function() {
     'assets/topics/defer.js',
     'assets/topics/panic.js',
     'assets/topics/recover.js',
-    'assets/topics/struct.js',
   ];
   for (const f of topicFiles) {
     try {

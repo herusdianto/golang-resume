@@ -10,6 +10,8 @@ Topics (located in `assets/topics/`):
 - Variables (`vars.js`) — variable declarations and scope
 - Constants (`consts.js`) — const declarations and usage
 - Types (`types.js`) — type declarations and conversion
+- Structs (`struct.js`) — struct definition, methods, embedding, and pointer/value receivers
+- Interfaces (`interface.js`) — interface definitions, implementations, type assertions, and empty interface
 - Printf & Formatting (`printf.js`) — formatting output
 - Arithmetic (`aritmatika.js`) — basic numeric operations and expressions
 - Logical operators (`logika.js`) — boolean logic and operators
@@ -25,7 +27,6 @@ Topics (located in `assets/topics/`):
 - Defer (`defer.js`) — deferred function calls
 - Panic (`panic.js`) — causing runtime panics
 - Recover (`recover.js`) — recovering from panics
-- Structs (`struct.js`) — struct definition, methods, embedding, and pointer/value receivers
 
 Files of interest:
 - `index.html` — static resume UI (open in a browser or view the Live demo)
