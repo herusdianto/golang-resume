@@ -14,6 +14,7 @@ Topics (sidebar order):
 - Printf & Formatting (`printf.js`) — formatting output and common verbs
 - Type Conversion (`conversion.js`) — explicit casts, strconv helpers
 - Type declarations & assertions (`type_decl.js`) — named types, aliases, methods, and type assertions
+- Access / Exporting (`access_modifier.js`) — exported vs unexported identifiers, package visibility, and effects (e.g., JSON marshaling)
 - Pointers (`pointer.js`) — addresses, dereference, and pointer receivers
 - Structs (`struct.js`) — struct definition, methods, embedding
 - Interfaces (`interface.js`) — interface definitions and empty interface
