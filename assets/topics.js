@@ -22,7 +22,8 @@ window.__topicsLoadedPromise = (async function() {
     'assets/topics/closure.js',
     'assets/topics/defer.js',
     'assets/topics/panic.js',
-    'assets/topics/recover.js'
+    'assets/topics/recover.js',
+    'assets/topics/struct.js',
   ];
   for (const f of topicFiles) {
     try {

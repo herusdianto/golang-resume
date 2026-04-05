@@ -25,6 +25,7 @@ Topics (located in `assets/topics/`):
 - Defer (`defer.js`) — deferred function calls
 - Panic (`panic.js`) — causing runtime panics
 - Recover (`recover.js`) — recovering from panics
+- Structs (`struct.js`) — struct definition, methods, embedding, and pointer/value receivers
 
 Files of interest:
 - `index.html` — static resume UI (open in a browser or view the Live demo)
