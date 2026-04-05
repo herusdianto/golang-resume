@@ -39,11 +39,16 @@ Topics (sidebar order):
 
 - Functions (`functions.js`) — function declarations and returns
 - Closures (`closure.js`) — function literals and closures
-- Unit Testing (`unit_test.js`) — using the `testing` package, table-driven tests, subtests, TestMain, and benchmarks
 
 - Defer (`defer.js`) — deferred calls
 - Panic (`panic.js`) — causing runtime panics
 - Recover (`recover.js`) — recovering from panics
+
+- Unit Testing (`unit_test.js`) — using the `testing` package, table-driven tests, subtests, TestMain, and benchmarks
+
+- Goroutines & Channels (`goroutine.js`) — launching goroutines, channels, select, and WaitGroup synchronization
+
+- Context (`context.js`) — cancellation, timeouts/deadlines, request-scoped values, and best-practices
 
 How to use
 1. Open `index.html` in a browser or visit the Live demo link above.
