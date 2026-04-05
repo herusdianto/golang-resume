@@ -15,6 +15,7 @@ Topics (located in `assets/topics/`):
 - Interfaces (`interface.js`) — interface definitions, implementations, type assertions, and empty interface
 - Errors (`errors.js`) — examples of the standard `errors` package: sentinel errors, wrapping with %w, errors.Is, errors.As, errors.Unwrap, and custom error types
 - Nil (`nil.js`) — nil values for slices, maps, pointers, channels, funcs, and interfaces
+- Type declarations & assertions (`type_decl.js`) — type alias vs new type, conversion, methods on named types, interface assertions and type switches
 - Arithmetic (`aritmatika.js`) — basic numeric operations and expressions
 - Logical operators (`logika.js`) — boolean logic and operators
 - Arrays (`arrays.js`) — fixed-size collections

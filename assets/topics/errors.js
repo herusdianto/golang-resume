@@ -1,7 +1,7 @@
 window.topics = window.topics || [];
 window.topics.push({
   id: 'interface_errors',
-  title: 'Errors (builtin package)',
+  title: 'Errors',
   desc: 'Examples using the standard library `errors` package: sentinel errors, wrapping with %w, errors.Is, errors.As, errors.Unwrap, and custom error types.',
   code: `package main
 

@@ -13,6 +13,7 @@ window.__topicsLoadedPromise = (async function() {
     'assets/topics/interface.js',
     'assets/topics/errors.js',
     'assets/topics/nil.js',
+    'assets/topics/type_decl.js',
     'assets/topics/aritmatika.js',
     'assets/topics/logika.js',
     'assets/topics/arrays.js',
