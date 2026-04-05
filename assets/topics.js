@@ -54,6 +54,9 @@ window.__topicsLoadedPromise = (async function() {
     // Unit testing
     'assets/topics/unit_test.js',
 
+    // HTTP routing (stdlib + patterns)
+    'assets/topics/http_router.js',
+
     // Goroutines & Channels
     'assets/topics/goroutine.js',
 
