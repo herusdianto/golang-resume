@@ -35,6 +35,7 @@ window.__topicsLoadedPromise = (async function() {
     'assets/topics/arrays.js',
     'assets/topics/slices.js',
     'assets/topics/maps.js',
+    'assets/topics/file_io.js',
 
     // Control flow
     'assets/topics/if.js',

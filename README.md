@@ -26,6 +26,7 @@ Topics (sidebar order):
 - Arrays (`arrays.js`) — Array examples: declaration, index access, zero-values, and partial initialization.
 - Slices (`slices.js`) — Slice examples: literals, make, slicing from array, append, reslice, copy, and len/cap behavior.
 - Maps (`maps.js`) — Map examples: literals, key access, the value, ok idiom, iteration, and delete.
+- File I/O & OS (`file_io.js`) — Create, read, write, copy, move, and delete files using the standard library: os, io, bufio, and io/fs; permission bits and error handling.
 - If / Else (`if.js`) — If statement examples: if, if-else, and if with a short statement before the condition.
 - Switch (`switch.js`) — Switch examples: multi-case switch, switch without expression, and fallthrough.
 - For (`for.js`) — Examples of different for forms: traditional for, while-like loop, and range iteration.
