@@ -53,6 +53,9 @@ window.__topicsLoadedPromise = (async function() {
 
     // Unit testing
     'assets/topics/unit_test.js',
+
+    // Goroutines & Channels (moved to the very end)
+    'assets/topics/goroutine.js',
   ];
   for (const f of topicFiles) {
     try {
