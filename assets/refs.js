@@ -30,5 +30,21 @@ window.typesReferenceHtml = `<section class="types-reference">
 <p class="note">Catatan: rentang numeric adalah teoretis; ukuran <code>int</code>/<code>uint</code> bergantung pada arsitektur (32-bit/64-bit).</p>
 </section>`;
 
-window.printfReferenceHtml = `...`;
-
+window.printfReferenceHtml = `<div class="printf-ref">
+  <p>Example <code>fmt.Printf</code> using format verbs and width/precision options.</p>
+  <table class="type-table">
+    <thead><tr><th>Verb</th><th>Description</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td>%v</td><td>Default format for value</td><td><code>fmt.Printf("%v", x)</code></td></tr>
+      <tr><td>%T</td><td>Type of the value</td><td><code>fmt.Printf("%T", x)</code></td></tr>
+      <tr><td>%s</td><td>String</td><td><code>%s</code></td></tr>
+      <tr><td>%d</td><td>Decimal integer</td><td><code>%d</code></td></tr>
+      <tr><td>%f</td><td>Floating-point (default 6 dec places)</td><td><code>%.2f</code></td></tr>
+      <tr><td>%t</td><td>Boolean</td><td><code>%t</code></td></tr>
+      <tr><td>%#x</td><td>Hex with 0x prefix</td><td><code>%#x</code></td></tr>
+      <tr><td>%q</td><td>Double-quoted string</td><td><code>%q</code></td></tr>
+      <tr><td>%p</td><td>Pointer address</td><td><code>%p</code></td></tr>
+    </tbody>
+  </table>
+  <p>Width/precision options: <code>%6d</code> (width), <code>%-10s</code> (left align), <code>%06d</code> (zero pad), <code>%8.3f</code> (width + precision).</p>
+</div>`;
