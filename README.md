@@ -39,6 +39,7 @@ Topics (sidebar order):
 - Unit Testing (`unit_test.js`) — Introduction to Go testing: the `testing` package, table-driven tests, subtests, `TestMain`, benchmarks, and common `go test` commands.
 - HTTP Router (`http_router.js`) — Routing with the standard `net/http` (ServeMux & Handler) and common patterns: handler funcs, middleware, URL params and brief mention of third-party routers.
 - RESTful API (`restful_api.js`) — Building JSON-based REST APIs with the standard library: handlers, request decoding, response encoding, status codes, routing patterns, and graceful shutdown.
+- DB Migration (`db_migration.js`) — Schema migrations: auto-apply migrations on startup (golang-migrate) and library-driven auto-migration (GORM AutoMigrate).
 - Logging (`logging.js`) — Logging with the standard `log` package: flags, prefixes, custom loggers, basic structured logging patterns, and notes about third-party loggers (logrus, zerolog). Also include request-scoped logging tips (request-id) and performance notes.
 - Goroutines & Channels (`goroutine.js`) — Concurrency basics: launching goroutines with `go`, communicating via channels (buffered/unbuffered), `select`, and simple synchronization with `sync.WaitGroup`.
 - Context (`context.js`) — The `context` package: cancellation, timeouts/deadlines, passing request-scoped values, and best-practices for goroutines and API boundaries.
