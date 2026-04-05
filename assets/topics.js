@@ -56,6 +56,7 @@ window.__topicsLoadedPromise = (async function() {
 
     // HTTP routing (stdlib + patterns)
     'assets/topics/http_router.js',
+    'assets/topics/restful_api.js',
 
     // Goroutines & Channels
     'assets/topics/goroutine.js',

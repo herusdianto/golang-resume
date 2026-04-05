@@ -37,6 +37,7 @@ Topics (sidebar order):
 - Recover (`recover.js`) — Example of recover: using recover in a deferred function to catch panic and continue execution.
 - Unit Testing (`unit_test.js`) — Introduction to Go testing: the `testing` package, table-driven tests, subtests, `TestMain`, benchmarks, and common `go test` commands.
 - HTTP Router (`http_router.js`) — Routing with the standard `net/http` (ServeMux & Handler) and common patterns: handler funcs, middleware, URL params and brief mention of third-party routers.
+- RESTful API (`restful_api.js`) — Building JSON-based REST APIs with the standard library: handlers, request decoding, response encoding, status codes, routing patterns, and graceful shutdown.
 - Goroutines & Channels (`goroutine.js`) — Concurrency basics: launching goroutines with `go`, communicating via channels (buffered/unbuffered), `select`, and simple synchronization with `sync.WaitGroup`.
 - Context (`context.js`) — The `context` package: cancellation, timeouts/deadlines, passing request-scoped values, and best-practices for goroutines and API boundaries.
 
