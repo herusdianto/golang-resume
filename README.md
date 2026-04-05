@@ -12,6 +12,7 @@ Topics (located in `assets/topics/`):
 - Types (`types.js`) — type declarations and conversion
 - Structs (`struct.js`) — struct definition, methods, embedding, and pointer/value receivers
 - Interfaces (`interface.js`) — interface definitions, implementations, type assertions, and empty interface
+- Nil (`nil.js`) — nil values for slices, maps, pointers, channels, funcs, and interfaces
 - Printf & Formatting (`printf.js`) — formatting output
 - Arithmetic (`aritmatika.js`) — basic numeric operations and expressions
 - Logical operators (`logika.js`) — boolean logic and operators
